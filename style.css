@@ -1,0 +1,412 @@
+· CSS
+/* RESET - removes default spacing browsers add */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+/* BODY - base styles for the whole page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0a0a0a;
+  color: #f0ede8;
+  line-height: 1.6;
+}
+ 
+/* ── NAVBAR ── */
+header {
+  position: fixed; /* sticks to the top when you scroll */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /* makes sure navbar stays on top of everything */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: rgba(10, 10, 10, 0.9);
+  border-bottom: 1px solid #333;
+}
+ 
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c8f04f;
+}
+ 
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+ 
+nav a {
+  text-decoration: none;
+  color: #aaaaaa;
+  font-size: 14px;
+  font-weight: 500;
+}
+ 
+nav a:hover {
+  color: #c8f04f;
+}
+ 
+/* ── HERO ── */
+.hero {
+  min-height: 100vh; /* fills the whole screen height */
+  display: flex;
+  align-items: flex-end;
+  padding: 0 60px 80px;
+  background-image: url("./Assets/background_image.jpg");
+  background-size: cover;
+  background-position: center top; background-repeat: no-repeat;
+}
+ 
+.hero-content {
+  max-width: 600px;
+}
+ 
+.hero-tag {
+  display: inline-block;
+  background-color: #1e2e0a;
+  color: #c8f04f;
+  border: 1px solid #c8f04f;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+ 
+.hero h2 {
+  font-size: 72px;
+  font-weight: bold;
+  line-height: 1.0;
+  margin-bottom: 16px;
+}
+ 
+.hero h2 span {
+  color: #c8f04f;
+}
+ 
+.hero p {
+  font-size: 16px;
+  color: #aaaaaa;
+  max-width: 420px;
+  margin-bottom: 30px;
+}
+ 
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #c8f04f;
+  color: #0a0a0a;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+ 
+.btn:hover {
+  background-color: #b0d93a;
+}
+ 
+/* ── SECTIONS (shared styles) ── */
+section {
+  padding: 90px 60px;
+}
+ 
+.section-label {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c8f04f;
+  margin-bottom: 10px;
+}
+ 
+section h2 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+ 
+/* ── ABOUT ── */
+.about {
+  background-color: #0a0a0a;
+}
+ 
+.about-text {
+  color: #aaaaaa;
+  font-size: 16px;
+  max-width: 550px;
+  margin-bottom: 40px;
+}
+ 
+/* ── CARDS (shared row layout) ── */
+.card-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* cards stack on small screens */
+}
+ 
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 24px;
+  flex: 1;
+  min-width: 200px;
+}
+ 
+.card:hover {
+  border-color: #555;
+  transform: translateY(-4px);
+  transition: transform 0.2s, border-color 0.2s;
+}
+ 
+.card h3 {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #c8f04f;
+  margin-bottom: 14px;
+}
+ 
+.card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ 
+.card ul li {
+  font-size: 14px;
+  color: #aaaaaa;
+}
+ 
+/* ── SKILLS ── */
+.skills {
+  background-color: #111111;
+}
+ 
+.skill-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 32px 24px;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  text-decoration: none;
+  color: #f0ede8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+ 
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: #555;
+  transition: transform 0.2s, border-color 0.2s;
+}
+ 
+.skill-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+ 
+/* Each icon gets its own brand colour */
+.html-icon {
+  background-color: #3d1208;
+  color: #e44d26;
+  border: 1px solid #e44d26;
+}
+ 
+.css-icon {
+  background-color: #0a1240;
+  color: #264de4;
+  border: 1px solid #264de4;
+}
+ 
+.js-icon {
+  background-color: #2e2a00;
+  color: #f7df1e;
+  border: 1px solid #f7df1e;
+}
+
+.github-skill-icon {
+  background-color: #222222;
+  color: #ffffff;
+  border: 1px solid #444444;
+}
+ 
+.skill-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+ 
+.skill-card p {
+  font-size: 13px;
+  color: #aaaaaa;
+}
+
+.skills .card-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+ 
+.cert-badge {
+  display: inline-block;
+  background-color: #1e2e0a;
+  color: #c8f04f;
+  border: 1px solid #c8f04f;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+ 
+/* ── PROJECTS ── */
+.projects {
+  background-color: #0a0a0a;
+}
+ 
+.project-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 16px;
+  overflow: hidden; /* keeps the thumb corners rounded */
+  text-decoration: none;
+  color: #f0ede8;
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #555;
+  transition: transform 0.2s, border-color 0.2s;
+}
+ 
+.project-thumb {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+/* Each project thumb gets its own background */
+.netflix-thumb { background-color: #141414; }
+.tesla-thumb   { background-color: #1c1c1e; }
+.todo-thumb    { background-color: #0f1623; }
+ 
+.project-logo-text {
+  font-size: 48px;
+  font-weight: 900;
+}
+ 
+.netflix-logo { color: #e50914; }
+.tesla-logo   { color: #cc0000; font-size: 28px; letter-spacing: 4px; }
+.todo-logo    { color: #4a9eff; font-size: 26px; }
+ 
+.project-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ 
+.project-info h3 {
+  font-size: 17px;
+  font-weight: bold;
+}
+ 
+.project-info p {
+  font-size: 13px;
+  color: #aaaaaa;
+}
+ 
+.visit-link {
+  font-size: 13px;
+  color: #c8f04f;
+  margin-top: 6px;
+}
+ 
+/* ── CONTACT ── */
+.contact {
+  background-color: #111111;
+  text-align: center;
+}
+ 
+.contact p {
+  color: #aaaaaa;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+ 
+.contact-info {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+ 
+.contact-info p {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 14px 22px;
+  font-size: 14px;
+}
+ 
+/* ── FOOTER ── */
+footer {
+  padding: 24px 60px;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+ 
+footer p {
+  font-size: 13px;
+  color: #555;
+}
+ 
+/* ── RESPONSIVE (phones & tablets) ── */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 24px;
+  }
+ 
+  section {
+    padding: 70px 24px;
+  }
+ 
+  .hero {
+    padding: 0 24px 60px;
+  }
+ 
+  .hero h2 {
+    font-size: 48px;
+  }
+ 
+  .card-row {
+    flex-direction: column;
+  }
+}
