@@ -52,6 +52,7 @@ nav a {
 nav a:hover {
   color: #c8f04f;
 }
+
  
 /* ── HERO ── */
 .hero{
@@ -66,7 +67,7 @@ nav a:hover {
 
     gap:70px;
 
-    padding:80px;
+    padding:50px;
 
 }
 
@@ -163,7 +164,7 @@ nav a:hover {
  
 /* ── SECTIONS (shared styles) ── */
 section {
-  padding: 90px 60px;
+  padding: 50px 50px;
 }
  
 .section-label {
@@ -180,6 +181,34 @@ section h2 {
   font-size: 42px;
   font-weight: bold;
   margin-bottom: 30px;
+}
+
+.section-divider{
+    position: relative;
+    width: 80%;
+    height: 2px;
+    margin: 100px auto;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(200,240,79,.8),
+        transparent
+    );
+}
+
+.section-divider::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 20px;
+    background: radial-gradient(
+        ellipse,
+        rgba(200,240,79,.15),
+        transparent 70%
+    );
 }
  
 /* ── ABOUT ── */
@@ -220,9 +249,9 @@ section h2 {
 
 .highlight-column h3{
 
-    color:#3cff78;
+    color: hsl(75, 84%, 63%);
 
-    font-size:1.7rem;
+    font-size:1.5rem;
 
     margin-bottom:40px;
 
@@ -246,7 +275,7 @@ section h2 {
 
     border-radius:20px;
 
-    background:#3cff78;
+    background: hsl(75, 84%, 63%);
 
     flex-shrink:0;
 
@@ -279,37 +308,57 @@ section h2 {
   background-color: #111111;
 }
  
-.skill-card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 16px;
-  padding: 32px 24px;
-  flex: 1;
-  min-width: 200px;
-  text-align: center;
-  text-decoration: none;
-  color: #f0ede8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
+.skill-card{
+
+    background:#171717;
+
+    border:1px solid #2b2b2b;
+
+    border-radius:18px;
+
+    padding:35px 25px;
+
+    width:260px;
+    height:300px;
+
+    text-decoration:none;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
 }
  
 .skill-card:hover {
-  transform: translateY(-6px);
-  border-color: #555;
-  transition: transform 0.2s, border-color 0.2s;
+    transform:translateY(-10px);
+    border-color:#c8f04f;
+    box-shadow:0 15px 40px rgba(200,240,79,.15);
 }
  
 .skill-icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
+    width:90px;
+    height:90px;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
+    font-weight:bold;
+    font-size:20px;
 }
  
 /* Each icon gets its own brand colour */
@@ -338,13 +387,15 @@ section h2 {
 }
  
 .skill-card h3 {
-  font-size: 18px;
-  font-weight: bold;
+  margin-top:10px;
+  margin-bottom:12px;
+  font-size:1.4rem;
 }
  
 .skill-card p {
-  font-size: 13px;
-  color: #aaaaaa;
+  color:#9d9d9d;
+  line-height:1.7;
+  margin-bottom:25px;
 }
 
 .skills .card-row {
@@ -354,13 +405,12 @@ section h2 {
 }
  
 .cert-badge {
-  display: inline-block;
-  background-color: #1e2e0a;
-  color: #c8f04f;
-  border: 1px solid #c8f04f;
-  padding: 5px 14px;
-  border-radius: 20px;
-  font-size: 12px;
+  margin-top:auto;
+  padding:8px 18px;
+  border-radius:25px;
+  border:1px solid #c8f04f;
+  color:#c8f04f;
+  transition:.3s;
 }
  
 /* ── PROJECTS ── */
