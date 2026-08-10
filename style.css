@@ -481,6 +481,28 @@ section h2 {
   color: #c8f04f;
   margin-top: 6px;
 }
+
+/* PROJECT CASE STUDY LINKS */
+
+.project-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.case-study-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #00ff88;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.case-study-link:hover {
+    text-decoration: underline;
+    transform: translateX(3px);
+}
  
 /* ── CONTACT ── */
 .contact {
