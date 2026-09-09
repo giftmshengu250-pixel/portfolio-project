@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sifiso Gift Tshabalala - Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
  
   <!-- NAVBAR -->
   <header>
     <h1 class="logo">Sifiso.</h1>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
     <nav>
+      <nav id="mainNav">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -26,8 +30,15 @@
   <section id="home" class="hero">
     <div class="hero-content">
       <h2>Sifiso<br><span>Tshabalala</span></h2>
+<<<<<<< HEAD
       <p class="hero-title"> Junior Web Developer building responsive websites and user-friendly web experiences.</p>
       <p class="hero-description">I build digital solutions around real problems — creating interactive websites and applications that make everyday experiences simpler.</p>
+=======
+      
+      <p class="hero-title"> Junior Web Developer building responsive websites and user-friendly web experiences.</p>
+      <p class="hero-description">I build digital solutions around real problems — creating interactive websites and applications that make everyday experiences simpler.
+</p>
+>>>>>>> 66b9b2a (Updated projects section)
       <a href="#pFront-End Developer creating responsive websites and user-friendly web experiences.rojects" class="btn">View my work →</a>
     </div>
     <div class="hero-image">
@@ -42,10 +53,15 @@
   <section id="about" class="about">
     <h1 class="section-label">Why I Build</h1>
     <p class="about-text">
+<<<<<<< HEAD
    I am an Junior Web Developer with a growing interest in Web Development, Cloud Engineering, and Automation. I enjoy turning ideas into practical solutions by using code to build interactive, functional, and user-focused digital tools. I'm also a collaborative developer who enjoys learning from others because I believe the best solutions are built through teamwork, curiosity, and continuous improvement.
     </p>
   
 
+=======
+     I am an Junior Web Developer with a growing interest in Web Development, Cloud Engineering, and Automation. I enjoy turning ideas into practical solutions by using code to build interactive, functional, and user-focused digital tools. I'm also a collaborative developer who enjoys learning from others because I believe the best solutions are built through teamwork, curiosity, and continuous improvement.
+    </p>
+>>>>>>> 66b9b2a (Updated projects section)
 
     <!-- WHAT I BRING -->
     <div class="about-highlights"> 
@@ -57,7 +73,7 @@
             <div class="line"></div>
 
             <div class="content">
-                <h4>💡 Problem Solver</h4>
+                <h4><i data-lucide="lightbulb"></i> Problem Solver</h4>
                 <p>I enjoy understanding business challenges and turning them into practical digital solutions.</p>
             </div>
         </div>
@@ -66,7 +82,7 @@
             <div class="line"></div>
 
             <div class="content">
-                <h4>🤝 Collaborative</h4>
+                <h4><i data-lucide="users"></i>Collaborative</h4>
                 <p>I enjoy working with others, sharing ideas and learning from different perspectives.</p>
             </div>
         </div>
@@ -75,7 +91,7 @@
             <div class="line"></div>
 
             <div class="content">
-                <h4>🚀 Continuous Learner</h4>
+                <h4><i data-lucide="rocket"></i>Continuous Learner</h4>
                 <p>I constantly improve through projects, feedback and hands-on experience.</p>
             </div>
         </div>
@@ -84,7 +100,7 @@
             <div class="line"></div>
 
             <div class="content">
-                <h4>🎯 User-Focused</h4>
+                <h4><i data-lucide="target"></i> User-Focused</h4>
                 <p>I design with people in mind, creating interfaces that are simple and enjoyable to use.</p>
             </div>
         </div>
@@ -100,7 +116,7 @@
             <div class="line"></div>
 
             <div class="content">
-                <h4>🌐 Helping Businesses</h4>
+                <h4><i data-lucide="globe-2"></i>Helping Businesses</h4>
                 <p>Build websites that strengthen a business's online presence and customer experience.</p>
             </div>
         </div>
@@ -109,7 +125,7 @@
             <div class="line"></div>
 
             <div class="content">
-                <h4>⚡ Real-World Solutions</h4>
+                <h4><i data-lucide="zap"></i> Real-World Solutions</h4>
                 <p>Create digital products that solve everyday problems through clean, practical design.</p>
             </div>
         </div>
@@ -118,7 +134,7 @@
             <div class="line"></div>
 
             <div class="content">
-                <h4>☁️ Cloud Engineering</h4>
+                <h4><i data-lucide="cloud"></i>Cloud Engineering</h4>
                 <p>Continue building my development skills while working toward a career in Cloud Engineering.</p>
             </div>
         </div>
@@ -127,7 +143,7 @@
             <div class="line"></div>
 
             <div class="content">
-                <h4>📈 Continuous Growth</h4>
+                <h4><i data-lucide="trending-up"></i>Continuous Growth</h4>
                 <p>Keep learning new technologies and delivering greater value with every project.</p>
             </div>
       </div>
@@ -189,8 +205,8 @@
   </section>
   <div class="section-divider"></div>
 
-   <!-- PROJECTS SECTION -->
- <section id="projects" class="projects">
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects">
 
   <p class="section-label">My Work</p>
   <h2>Projects</h2>
@@ -199,164 +215,314 @@
 
     <!-- BARBER PROJECT -->
     <div class="project-wrapper">
-
-      <a href="http://127.0.0.1:5501/html/index.html"
-         target="_blank"
-         class="project-card">
+      <div class="project-card">
 
         <div class="project-thumb netflix-thumb">
-          <span class="Barber">B</span>
+          <div class="project-placeholder">
+            <i data-lucide="scissors"></i>
+          </div>
+
+          <div class="project-overlay"></div>
+
+          <span class="project-logo-text barber-logo">BARBER</span>
         </div>
 
         <div class="project-info">
           <h3>Barber Booking System</h3>
-          <p>Booking and queue management experience for a barber shop.</p>
-          <span class="visit-link">Visit project →</span>
+
+          <div class="project-tech">
+            <span class="tech">
+              <i class="devicon-html5-plain">HTML</i>
+            </span>
+
+            <span class="tech">
+              <i class="devicon-css3-plain">CSS</i>
+            </span>
+
+            <span class="tech javascript-tech">
+              <i class="devicon-javascript-plain">JavaScript</i>
+            </span>
+          </div>
+
+          <p>
+            A booking and queue management experience built to
+            demonstrate interactive web functionality and DOM
+            manipulation using JavaScript.
+          </p>
+
+          <div class="project-actions">
+            <a href="https://clinquant-sprite-0a85d0.netlify.app/"
+               target="_blank"
+               class="visit-link">
+              Visit project →
+            </a>
+
+            <a href="./case-studies/barber.html"
+               class="case-study-link">
+              View Case Study →
+            </a>
+          </div>
         </div>
 
-      </a>
-
-      <a href="./case-studies/barber.html" class="case-study-link">
-        View Case Study →
-      </a>
-
+      </div>
     </div>
 
 
     <!-- NETFLIX PROJECT -->
     <div class="project-wrapper">
-
-      <a href="https://n3tflix-clone26.netlify.app/"
-         target="_blank"
-         class="project-card">
+      <div class="project-card">
 
         <div class="project-thumb netflix-thumb">
+          <div class="project-placeholder">
+            <i data-lucide="play"></i>
+          </div>
+
+          <div class="project-overlay"></div>
+
           <span class="project-logo-text netflix-logo">N</span>
         </div>
 
         <div class="project-info">
           <h3>Netflix Clone</h3>
-          <p>A responsive Netflix-inspired streaming landing page.</p>
-          <span class="visit-link">Visit project →</span>
+
+          <div class="project-tech">
+            <span class="tech">
+              <i class="devicon-html5-plain">HTML</i>
+            </span>
+
+            <span class="tech">
+              <i class="devicon-css3-plain">CSS</i>
+            </span>
+          </div>
+
+          <p>
+            A responsive Netflix-inspired streaming landing page.
+          </p>
+
+          <div class="project-actions">
+            <a href="https://n3tflix-clone26.netlify.app/"
+               target="_blank"
+               class="visit-link">
+              Visit project →
+            </a>
+
+            <a href="./case-studies/netflix.html"
+               class="case-study-link">
+              View Case Study →
+            </a>
+          </div>
         </div>
 
-      </a>
-
-      <a href="./case-studies/netflix.html" class="case-study-link">
-        View Case Study →
-      </a>
-
+      </div>
     </div>
 
 
     <!-- TESLA PROJECT -->
     <div class="project-wrapper">
-
-      <a href="https://tecla-clone.netlify.app/"
-         target="_blank"
-         class="project-card">
+      <div class="project-card">
 
         <div class="project-thumb tesla-thumb">
+          <div class="project-placeholder">
+            <i data-lucide="car"></i>
+          </div>
+
+          <div class="project-overlay"></div>
+
           <span class="project-logo-text tesla-logo">TESLA</span>
         </div>
 
         <div class="project-info">
           <h3>Tesla Clone</h3>
-          <p>Responsive Tesla-inspired landing page with full-screen sections.</p>
-          <span class="visit-link">Visit project →</span>
+
+          <div class="project-tech">
+            <span class="tech">
+              <i class="devicon-html5-plain">HTML</i>
+            </span>
+
+            <span class="tech">
+              <i class="devicon-css3-plain">CSS</i>
+            </span>
+          </div>
+
+          <p>
+            Responsive Tesla-inspired landing page with full-screen sections.
+          </p>
+
+          <div class="project-actions">
+            <a href="https://tecla-clone.netlify.app/"
+               target="_blank"
+               class="visit-link">
+              Visit project →
+            </a>
+          </div>
         </div>
 
-      </a>
-
+      </div>
     </div>
 
 
     <!-- TO-DO PROJECT -->
     <div class="project-wrapper">
-
-      <a href="https://charming-pie-7651d2.netlify.app/"
-         target="_blank"
-         class="project-card">
+      <div class="project-card">
 
         <div class="project-thumb todo-thumb">
+          <div class="project-placeholder">
+            <i data-lucide="check-square"></i>
+          </div>
+
+          <div class="project-overlay"></div>
+
           <span class="project-logo-text todo-logo">✓ To-Do</span>
         </div>
 
         <div class="project-info">
           <h3>To-Do List App</h3>
-          <p>Interactive task manager built with HTML, CSS and JavaScript.</p>
-          <span class="visit-link">Visit project →</span>
+
+          <div class="project-tech">
+            <span class="tech">
+              <i class="devicon-html5-plain">HTML</i>
+            </span>
+
+            <span class="tech">
+              <i class="devicon-css3-plain">CSS</i>
+            </span>
+
+            <span class="tech javascript-tech">
+              <i class="devicon-javascript-plain">JavaScript</i>
+            </span>
+          </div>
+
+          <p>
+            Interactive task manager built with HTML, CSS and JavaScript.
+          </p>
+
+          <div class="project-actions">
+            <a href="https://charming-pie-7651d2.netlify.app/"
+               target="_blank"
+               class="visit-link">
+              Visit project →
+            </a>
+
+            <a href="./case-studies/todo.html"
+               class="case-study-link">
+              View Case Study →
+            </a>
+          </div>
         </div>
 
-      </a>
-
-      <a href="./case-studies/todo.html" class="case-study-link">
-        View Case Study →
-      </a>
-
+      </div>
     </div>
 
 
-    <!-- X / TWITTER PROJECT -->
+    <!-- ONLINE STORE PROJECT -->
     <div class="project-wrapper">
-
-      <a href="https://davinci-shopping-store.vercel.app/"
-         target="_blank"
-         class="project-card">
+      <div class="project-card">
 
         <div class="project-thumb todo-thumb">
           <span class="project-logo-text todo-logo">OS</span>
         </div>
 
         <div class="project-info">
-          <h3>Online store</h3>
-          <p>A online shopping store built with HTML/CSS/Javascript & React.</p>
-          <span class="visit-link">Visit project →</span>
+          <h3>Online Store</h3>
+
+          <div class="project-tech">
+            <span class="tech">
+              <i class="devicon-html5-plain">HTML</i>
+            </span>
+
+            <span class="tech">
+              <i class="devicon-css3-plain">CSS</i>
+            </span>
+
+            <span class="tech javascript-tech">
+              <i class="devicon-javascript-plain">JavaScript</i>
+            </span>
+
+            <span class="tech">
+              React
+            </span>
+          </div>
+
+          <p>
+            An online shopping store built with HTML, CSS, JavaScript and React.
+          </p>
+
+          <div class="project-actions">
+            <a href="https://davinci-shopping-store.vercel.app/"
+               target="_blank"
+               class="visit-link">
+              Visit project →
+            </a>
+          </div>
         </div>
 
-      </a>
+      </div>
+    </div>
 
+
+    <!-- X / TWITTER PROJECT -->
+    <div class="project-wrapper">
+      <div class="project-card">
+
+        <div class="project-thumb todo-thumb">
+          <div class="project-placeholder">
+            <i data-lucide="message-square"></i>
+          </div>
+
+          <div class="project-overlay"></div>
+
+          <span class="project-logo-text todo-logo">X</span>
+        </div>
+
+        <div class="project-info">
+          <h3>X/Twitter Clone</h3>
+
+          <div class="project-tech">
+            <span class="tech">
+              <i class="devicon-html5-plain">HTML</i>
+            </span>
+
+            <span class="tech">
+              <i class="devicon-css3-plain">CSS</i>
+            </span>
+          </div>
+
+          <p>
+            A social media clone built with HTML and CSS.
+          </p>
+
+          <div class="project-actions">
+            <a href="https://gleaming-sprinkles-2b3587.netlify.app/"
+               target="_blank"
+               class="visit-link">
+              Visit project →
+            </a>
+          </div>
+        </div>
+
+      </div>
     </div>
 
   </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact">
+
+  <p class="section-label">Get in touch</p>
+
+  <h2>Contact Me</h2>
+
+  <p>
+    I'm always open to new opportunities or just a chat about tech.
+  </p>
+
+  <div class="contact-info">
+    <p>📧 giftmshengu250@gmail.com</p>
+    <p>📞 081 475 8700</p>
+  </div>
 
 </section>
-  </section>
-  <div class="section-divider"></div>
-
-  <section id="proficiencies" class="proficiencies">
-    <p class="section-label">Technical Write-Ups</p>
-    <h2>Technical Proficiencies</h2>
-
-    <div class="proficiency-list">
-      <div class="proficiency-item">
-        <h3>HTML</h3>
-        <p>Capable of building structured webpages using headings, sections, navigation menus, forms and accessible page structures. Evidence includes my Tesla Landing Page, Netflix Clone and Portfolio Website projects.</p>
-      </div>
-
-      <div class="proficiency-item">
-        <h3>CSS</h3>
-        <p>Learning to build responsive layouts using Flexbox and Grid. Comfortable creating animations, hover effects, mobile-friendly designs and modern user interfaces.</p>
-      </div>
-
-      <div class="proficiency-item">
-        <h3>JavaScript</h3>
-        <p>Currently learning JavaScript and using it to add interactivity to websites through events, functions and DOM manipulation.</p>
-      </div>
-    </div>
-  </section>
- 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="contact">
-    <p class="section-label">Get in touch</p>
-    <h2>Contact Me</h2>
-    <p>I'm always open to new opportunities or just a chat about tech.</p>
- 
-    <div class="contact-info">
-      <p>📧 giftmshengu250@gmail.com</p>
-      <p>📞 081 475 8700</p>
-    </div>
-  </section>
  
   <!-- FOOTER -->
   <footer>
@@ -364,5 +530,6 @@
   </footer>
  
   <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>

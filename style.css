@@ -103,7 +103,7 @@ nav a:hover {
 
 .hero h2 span{
 
-    #c8f04f;
+    color: #c8f04f;
 
 }
 .hero-image{
@@ -121,6 +121,7 @@ nav a:hover {
     width:100%;
 
     max-width:650px;
+    height: auto;
 
     border-radius:25px;
 
@@ -257,6 +258,23 @@ section h2 {
 
 }
 
+.highlight-item h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.highlight-item h4 svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 1.8;
+    transition: transform 0.3s ease;
+}
+
+.highlight-item:hover h4 svg {
+    transform: translateY(-2px);
+}
+
 
 .highlight-item{
 
@@ -318,7 +336,7 @@ section h2 {
 
     padding:35px 25px;
 
-    width:260px;
+    width:100%;
     height:300px;
 
     text-decoration:none;
@@ -414,93 +432,201 @@ section h2 {
 }
  
 /* ── PROJECTS ── */
+
 .projects {
-  background-color: #0a0a0a;
-}
- 
-.project-card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 16px;
-  overflow: hidden; /* keeps the thumb corners rounded */
-  text-decoration: none;
-  color: #f0ede8;
-  flex: 1;
-  min-width: 220px;
-  display: flex;
-  flex-direction: column;
-}
- 
-.project-card:hover {
-  transform: translateY(-6px);
-  border-color: #555;
-  transition: transform 0.2s, border-color 0.2s;
-}
- 
-.project-thumb {
-  width: 100%;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
- 
-/* Each project thumb gets its own background */
-.netflix-thumb { background-color: #141414; }
-.tesla-thumb   { background-color: #1c1c1e; }
-.todo-thumb    { background-color: #0f1623; }
- 
-.project-logo-text {
-  font-size: 48px;
-  font-weight: 900;
-}
- 
-.netflix-logo { color: #e50914; }
-.tesla-logo   { color: #cc0000; font-size: 28px; letter-spacing: 4px; }
-.todo-logo    { color: #4a9eff; font-size: 26px; }
- 
-.project-info {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
- 
-.project-info h3 {
-  font-size: 17px;
-  font-weight: bold;
-}
- 
-.project-info p {
-  font-size: 13px;
-  color: #aaaaaa;
-}
- 
-.visit-link {
-  font-size: 13px;
-  color: #c8f04f;
-  margin-top: 6px;
+    background-color: #0a0a0a;
 }
 
-/* PROJECT CASE STUDY LINKS */
+.projects .card-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 30px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+}
 
 .project-wrapper {
     display: flex;
     flex-direction: column;
+    flex: 0 0 min(380px, 85vw);
+    scroll-snap-align: start;
+}
+
+.project-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #f0ede8;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #555;
+}
+
+
+/* ── PROJECT IMAGE / THUMB ── */
+
+.project-thumb {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.75)
+    );
+}
+
+.project-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.project-placeholder svg {
+    width: 55px;
+    height: 55px;
+    stroke-width: 1.5;
+    color: #f0ede8;
+}
+
+
+/* ── PROJECT BRANDING ── */
+
+.project-logo-text {
+    position: absolute;
+    z-index: 2;
+    bottom: 18px;
+    left: 20px;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.barber-thumb {
+    background: linear-gradient(
+        135deg,
+        #151515,
+        #292929
+    );
+}
+
+.barber-logo {
+    color: #ffffff;
+}
+
+
+/* ── PROJECT INFO ── */
+
+.project-info {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-info h3 {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+
+/* ── TECHNOLOGY BADGES ── */
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 9px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #111;
+    color: #cfcfcf;
+    font-size: 11px;
+}
+
+.javascript-tech {
+    border-color: rgba(200, 240, 79, 0.5);
+    background-color: rgba(200, 240, 79, 0.08);
+    color: #edf9be;
+}
+
+.tech i {
+    font-size: 15px;
+}
+
+
+/* ── PROJECT DESCRIPTION ── */
+
+.project-info p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #aaaaaa;
+}
+
+
+/* ── PROJECT ACTIONS ── */
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.project-actions a {
+    text-decoration: none;
+    transition: 0.2s ease;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.project-actions a:hover {
+    text-decoration: underline;
+}
+
+.visit-link {
+    color: #c8f04f;
 }
 
 .case-study-link {
-    display: inline-block;
-    margin-top: 12px;
     color: #00ff88;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: 0.2s ease;
 }
 
+
+/* ── CASE STUDY ── */
+
 .case-study-link:hover {
-    text-decoration: underline;
     transform: translateX(3px);
 }
  
@@ -544,27 +670,84 @@ footer p {
   color: #555;
 }
  
-/* ── RESPONSIVE (phones & tablets) ── */
+/* ── RESPONSIVE ── */
+
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 16px;
-    padding: 16px 24px;
-  }
- 
-  section {
-    padding: 70px 24px;
-  }
- 
-  .hero {
-    padding: 0 24px 60px;
-  }
- 
-  .hero h2 {
-    font-size: 48px;
-  }
- 
-  .card-row {
-    flex-direction: column;
-  }
+
+    header {
+        padding: 16px 24px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 70px 24px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 24px 60px;
+        gap: 40px;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .hero-image img {
+        max-width: 400px;
+    }
+
+    .about-highlights {
+        flex-direction: column;
+    }
+
+    .skills .card-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        padding: 24px;
+    }
+}
+
+
+/* ── SMALL PHONES ── */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 14px 16px;
+    }
+
+    nav ul {
+        gap: 9px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    section {
+        padding: 55px 16px;
+    }
+
+    .hero {
+        padding: 110px 16px 50px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .skills .card-row {
+        grid-template-columns: 1fr;
+    }
 }
