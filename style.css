@@ -347,7 +347,7 @@ section h2 {
 
     padding:35px 25px;
 
-    width:100%;
+    flex: 0 0 min(300px, 80vw);
     height:300px;
 
     text-decoration:none;
@@ -369,6 +369,8 @@ section h2 {
     position:relative;
 
     overflow:hidden;
+
+    scroll-snap-align: start;
 
 }
  
@@ -428,9 +430,72 @@ section h2 {
 }
 
 .skills .card-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 20px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+}
+
+/* Hide scrollbar but keep scrolling for Projects and Skills */
+.projects .card-row,
+.skills .card-row {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 10+ */
+}
+.projects .card-row::-webkit-scrollbar,
+.skills .card-row::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+}
+
+/* React icon background/border to match existing icons */
+.react-icon {
+    width:90px;
+    height:90px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+    background-color:#071014;
+    border:1px solid #61DAFB;
+    color:#61DAFB;
+}
+
+/* Accordion styles (minimal, keep existing theme) */
+.accordion-header {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.accordion-icon::before {
+    content: "+";
+    color: #c8f04f;
+    font-weight: bold;
+}
+
+.accordion-header[aria-expanded="true"] .accordion-icon::before {
+    content: "−";
+}
+
+.accordion-panel {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.28s ease;
 }
  
 .cert-badge {
