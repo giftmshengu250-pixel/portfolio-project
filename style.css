@@ -15,6 +15,28 @@ body {
   line-height: 1.6;
 }
 
+/* --------------------------------------------------------------
+   FIX: header height variable + scroll-margin-top on sections.
+
+   The header is `position: fixed`, so it floats on top of the page
+   and doesn't take up real space in the document. When a nav link
+   scrolls a section into view, the browser lines the section's very
+   top edge up with the top of the window — right underneath the
+   fixed header — which hides the section's heading behind it.
+
+   scroll-margin-top tells the browser "leave this much empty space
+   above this element when scrolling to it", which stops the fixed
+   header from covering the heading. We use a CSS variable so we only
+   have to update one number if the header's height ever changes.
+   -------------------------------------------------------------- */
+:root {
+    --header-height: 90px;
+}
+
+section {
+    scroll-margin-top: var(--header-height);
+}
+
 /* Hide mobile nav toggle on larger screens; show only on mobile */
 .nav-toggle {
     display: none;
@@ -754,6 +776,12 @@ footer p {
         padding: 16px 24px;
     }
 
+    /* The navbar is shorter on mobile (less padding), so the empty
+       space we reserve above each section can shrink to match. */
+    :root {
+        --header-height: 70px;
+    }
+
     /* Show the hamburger toggle on smaller screens */
     .nav-toggle {
       display: block;
@@ -776,6 +804,26 @@ footer p {
         text-align: center;
         padding: 120px 24px 60px;
         gap: 40px;
+        /* FIX: the base .hero rule sets min-height:100vh for the
+           desktop side-by-side layout. On mobile (stacked layout)
+           that forces empty space to appear, which is what was
+           pushing the image toward the bottom of the screen. */
+        min-height: auto;
+    }
+
+    .hero-content {
+        /* FIX: the base rule sets flex:1, which — combined with the
+           100vh height above — stretched this box to fill half the
+           screen even when its text didn't need that much room. */
+        flex: none;
+        max-width: 100%;
+        order: 2; /* text shows AFTER the image on mobile */
+    }
+
+    .hero-image {
+        flex: none; /* same fix as above, for the image's wrapper */
+        width: 100%;
+        order: 1; /* FIX: image shows FIRST on mobile, above the text */
     }
 
     .hero h2 {
@@ -784,6 +832,7 @@ footer p {
 
     .hero-image img {
         max-width: 400px;
+        margin: 0 auto; /* keep the image centered now that its wrapper is full-width */
     }
 
     .about-highlights {
