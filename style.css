@@ -12,7 +12,7 @@ body {
     scroll-behavior: smooth;
     background-color: #0a0a0a;
   color: #f0ede8;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* --------------------------------------------------------------
@@ -98,9 +98,9 @@ nav a:hover {
 
     align-items:center;
 
-    gap:70px;
+    gap:54px;
 
-    padding:50px;
+    padding:42px 50px;
 
 }
 
@@ -126,11 +126,11 @@ nav a:hover {
 
 .hero h2{
 
-    font-size:5rem;
+    font-size:4.2rem;
 
     line-height:1.1;
 
-    margin-bottom:25px;
+    margin-bottom:22px;
 
 }
 
@@ -153,7 +153,7 @@ nav a:hover {
 
     width:100%;
 
-    max-width:650px;
+    max-width:560px;
     height: auto;
 
     border-radius:25px;
@@ -165,14 +165,14 @@ nav a:hover {
 }
  
 .hero p {
-  font-size: 16px;
+  font-size: 15px;
   max-width: 420px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .hero-title{
     color: hsl(75, 84%, 63%);
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     font-weight: bold;
     margin-bottom: 10px;   /* Controls the gap below */
 }
@@ -183,11 +183,11 @@ nav a:hover {
  
 .btn {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 12px 22px;
   background-color: #c8f04f;
   color: #0a0a0a;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 10px;
   text-decoration: none;
 }
@@ -198,12 +198,12 @@ nav a:hover {
  
 /* ── SECTIONS (shared styles) ── */
 section {
-  padding: 50px 50px;
+  padding: 42px 50px;
 }
  
 .section-label {
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -212,9 +212,9 @@ section {
 }
  
 section h2 {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .section-divider{
@@ -252,10 +252,10 @@ section h2 {
  
 .about-text {
   color: #aaaaaa;
-  font-size: 16px;
+  font-size: 15px;
   width: 100%;
   line-height: 1.8;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
  
 /* ── CARDS (shared row layout) ── */
@@ -367,10 +367,10 @@ section h2 {
 
     border-radius:18px;
 
-    padding:35px 25px;
+    padding:28px 22px;
 
-    flex: 0 0 min(300px, 80vw);
-    height:300px;
+    flex: 0 0 min(280px, 80vw);
+    height:280px;
 
     text-decoration:none;
 
@@ -403,15 +403,15 @@ section h2 {
 }
  
 .skill-icon {
-    width:90px;
-    height:90px;
-    border-radius:20px;
+    width:80px;
+    height:80px;
+    border-radius:18px;
     display:flex;
     justify-content:center;
     align-items:center;
-    margin-bottom:20px;
+    margin-bottom:18px;
     font-weight:bold;
-    font-size:20px;
+    font-size:18px;
 }
  
 /* Each icon gets its own brand colour */
@@ -440,15 +440,16 @@ section h2 {
 }
  
 .skill-card h3 {
-  margin-top:10px;
-  margin-bottom:12px;
-  font-size:1.4rem;
+  margin-top:8px;
+  margin-bottom:10px;
+  font-size:1.2rem;
 }
  
 .skill-card p {
   color:#9d9d9d;
-  line-height:1.7;
-  margin-bottom:25px;
+  line-height:1.6;
+  margin-bottom:18px;
+  font-size: 13px;
 }
 
 .skills .card-row {
@@ -540,7 +541,7 @@ section h2 {
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    gap: 30px;
+    gap: 22px;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -550,7 +551,7 @@ section h2 {
 .project-wrapper {
     display: flex;
     flex-direction: column;
-    flex: 0 0 min(380px, 85vw);
+    flex: 0 0 min(340px, 82vw);
     scroll-snap-align: start;
 }
 
@@ -578,7 +579,7 @@ section h2 {
 .project-thumb {
     position: relative;
     width: 100%;
-    height: 180px;
+    height: 160px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -650,7 +651,7 @@ section h2 {
 }
 
 .ihub-logo {
-    color: #c8f04f;
+    color:  #ffffff;
     letter-spacing: 1px;
 }
 
@@ -659,7 +660,7 @@ section h2 {
 }
 
 .airbnb-logo {
-    color: #ffddbf;
+    color:  #ffffff;
     letter-spacing: 1px;
     font-size: 22px;
 }
@@ -668,14 +669,14 @@ section h2 {
 /* ── PROJECT INFO ── */
 
 .project-info {
-    padding: 22px;
+    padding: 18px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .project-info h3 {
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 700;
 }
 
@@ -714,7 +715,7 @@ section h2 {
 /* ── PROJECT DESCRIPTION ── */
 
 .project-info p {
-    font-size: 13px;
+    font-size: 12.5px;
     line-height: 1.6;
     color: #aaaaaa;
 }
@@ -733,7 +734,7 @@ section h2 {
 .project-actions a {
     text-decoration: none;
     transition: 0.2s ease;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
 }
 
@@ -842,37 +843,50 @@ footer p {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 120px 24px 60px;
-        gap: 40px;
-        /* FIX: the base .hero rule sets min-height:100vh for the
-           desktop side-by-side layout. On mobile (stacked layout)
-           that forces empty space to appear, which is what was
-           pushing the image toward the bottom of the screen. */
+        padding: 110px 24px 52px;
+        gap: 24px;
         min-height: auto;
     }
 
     .hero-content {
-        /* FIX: the base rule sets flex:1, which — combined with the
-           100vh height above — stretched this box to fill half the
-           screen even when its text didn't need that much room. */
         flex: none;
         max-width: 100%;
-        order: 2; /* text shows AFTER the image on mobile */
-    }
-
-    .hero-image {
-        flex: none; /* same fix as above, for the image's wrapper */
-        width: 100%;
-        order: 1; /* FIX: image shows FIRST on mobile, above the text */
+        display: contents;
     }
 
     .hero h2 {
         font-size: 42px;
+        order: 1;
+    }
+
+    .hero-image {
+        flex: none;
+        width: 100%;
+        order: 2;
+    }
+
+    .hero-description {
+        order: 3;
+        max-width: 100%;
+        margin: 0 auto 18px;
+    }
+
+    .hero-title {
+        order: 4;
+        margin-bottom: 10px;
+    }
+
+    .hero-buttons {
+        order: 5;
+    }
+
+    .hero p {
+        max-width: 100%;
     }
 
     .hero-image img {
-        max-width: 400px;
-        margin: 0 auto; /* keep the image centered now that its wrapper is full-width */
+        max-width: 360px;
+        margin: 0 auto;
     }
 
     .about-highlights {
